@@ -4,11 +4,32 @@ body {
 }
 
 ul {
-  margin: 0px;
-  padding: 0px;
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
