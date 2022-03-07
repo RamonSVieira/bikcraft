@@ -1,4 +1,5 @@
 .button {
+  max-width: max-content;
   display: inline-block;
   padding: 16px 32px;
   background: linear-gradient(#ffbf00, #f2a50c);
@@ -11,6 +12,15 @@
 
 .button:hover {
   background: linear-gradient(#ffb60d, #e59317);
+}
+
+.button.secundario {
+  background: var(--cor-10);
+  color: var(--cor-2);
+}
+
+.button.secundario:hover {
+  background: linear-gradient(#2b2a2a, #252525);
 }
 
 @media (max-width: 600px) {
