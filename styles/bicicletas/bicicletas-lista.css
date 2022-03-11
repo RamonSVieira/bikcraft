@@ -16,6 +16,10 @@
   padding: 0 20px 20px 20px;
 }
 
+#bicicleta .bicicletas-lista ul {
+  padding: 0px 0px 20px 0px;
+}
+
 .bicicletas-lista ul li {
   min-width: 280px;
 }
