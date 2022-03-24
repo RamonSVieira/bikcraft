@@ -22,3 +22,46 @@ function ativarProduto(parametro) {
 }
 
 parametros.forEach(ativarProduto);
+
+// Perguntas Frequentes
+
+const perguntas = document.querySelectorAll(".perguntas button");
+
+function ativarPergunta(event) {
+  const pergunta = event.currentTarget;
+  const controls = pergunta.getAttribute("aria-controls");
+  const resposta = document.getElementById(controls);
+
+  resposta.classList.toggle("ativo");
+  pergunta.setAttribute("aria-expanded", resposta.classList.contains("ativo"));
+}
+
+function eventosPerguntas(pergunta) {
+  pergunta.addEventListener("click", ativarPergunta);
+}
+
+perguntas.forEach(eventosPerguntas);
+
+//Galeria de Bicicletas
+
+const galeria = document.querySelectorAll(".bicicletas-imagens img");
+const galeriaContainer = document.querySelector(".bicicletas-imagens");
+
+function trocarImagem(event) {
+  const img = event.currentTarget;
+  const media = matchMedia("(min-width: 1000px)");
+  if (media.matches) {
+    galeriaContainer.prepend(img);
+  }
+}
+
+function eventosGaleria(img) {
+  img.addEventListener("click", trocarImagem);
+}
+
+galeria.forEach(eventosGaleria);
+
+// Animação
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
